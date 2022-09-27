@@ -1,5 +1,5 @@
-CC=mcs
-CFLAGS=-out:
+COM=mcs
+FLAGS=-out:
 
 main: calc.cs
-	$(CC) $(CFLAGS)calc.exe calc.cs
+	$(COM) $(FLAGS)calc.exe calc.cs
