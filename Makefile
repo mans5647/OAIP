@@ -1,5 +1,2 @@
-COM=mcs
-FLAGS=-out:
-
-main: calc.cs
-	$(COM) $(FLAGS)calc.exe calc.cs
+all: piano.cs
+	mcs -out:piano.exe piano.cs
