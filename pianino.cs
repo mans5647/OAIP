@@ -13,7 +13,7 @@ static void usage()
 }
 static void RegSound(int c)
 {
-	Console.Beep(c, 255);
+	Console.Beep(c, 235);
 }
 static void qwerty(int [] patt)
 {
@@ -61,6 +61,16 @@ static void qwerty(int [] patt)
 		else if (symbol.Key == ConsoleKey.I)
 		{
 			int vice = patt[7];
+			RegSound(vice);
+		}
+		else if (symbol.Key == ConsoleKey.O)
+		{
+			int vice = patt[8];
+			RegSound(vice);
+		}
+		else if (symbol.Key == ConsoleKey.P)
+		{
+			int vice = patt[9];
 			RegSound(vice);
 		}
 	} while (symbol.Key != ConsoleKey.Escape);
@@ -113,6 +123,11 @@ static void lower_Q(int [] patt2)
 			int vice = patt2[7];
 			RegSound(vice);
 		}  
+		else if (sym.Key == ConsoleKey.L)
+		{
+			int vice = patt2[8];
+			RegSound(vice);
+		} 
 	} while (sym.Key != ConsoleKey.Escape);
 	Console.WriteLine("\n\nQuitting from octave 2 !\n");
 }
@@ -164,9 +179,9 @@ static void zxc(int [] patt3)
 static void Main() 
 {
 	
-	int [] oct1 = new int[] {659, 462, 534, 699, 744, 233, 345, 543}; 	
-	int [] oct2 = new int[] {341, 455, 266, 560, 302, 231, 444, 312};
-	int [] oct3 = new int[] {300, 400, 500, 362, 564, 313, 631, 189};
+	int [] oct1 = new int[] {2100, 2345, 2500, 2653, 2167, 2798, 2959, 2793, 2489, 3661}; 	
+	int [] oct2 = new int[] {523, 493, 587, 698, 624, 519, 472, 801, 942};
+	int [] oct3 = new int[] {200, 230, 260, 340 ,369, 440, 520, 350};
 	ConsoleKeyInfo main_key;
 
 	
@@ -190,6 +205,6 @@ static void Main()
 				zxc(oct3);
 			}
 	} while (main_key.Key != ConsoleKey.Escape);
-	
+	Console.Write("Quitting!\n");
 }
 }

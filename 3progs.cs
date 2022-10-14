@@ -9,19 +9,18 @@ namespace Programms3
 		{
 			Console.Write("\n");
 			Console.Write("Multiplication table:\n\n");
-			int[] ms1 = new int[11];
-			int[] ms2 = new int[11];
-			for (int i = 1; i<ms1.Length; ++i)
-			{
-				ms1[i] = i;
-				for (int j = 1; j<ms2.Length; ++j)
+
+			int[,] ms1 = new int[10,10];
+			for (int i = 1; i<ms1.Length; i++)
 				{
-					ms2[j] = j;
-					if (i>0) Console.Write(ms1[i] * ms2[j] + "\t");
-					else Console.Write(ms2[j] + "\t");
+					Console.Write(i + "\t");
+					for (int j = 1; i<ms1.Length; i++)
+					{
+						if (i>0) Console.Write(i*j+"\t");
+						else Console.Write( j +"\t");
+					}
 				}
 			Console.Write("\n");
-			}
 			Console.Write("\n");
 		}
 	}
