@@ -1,0 +1,15 @@
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.csproj.AssemblyReference.cache
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.AssemblyInfoInputs.cache
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.AssemblyInfo.cs
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.csproj.CoreCompileInputs.cache
+C:\Users\mansu\prjects\DiaryPrj\bin\Debug\net6.0\DiaryPrj.exe
+C:\Users\mansu\prjects\DiaryPrj\bin\Debug\net6.0\DiaryPrj.deps.json
+C:\Users\mansu\prjects\DiaryPrj\bin\Debug\net6.0\DiaryPrj.runtimeconfig.json
+C:\Users\mansu\prjects\DiaryPrj\bin\Debug\net6.0\DiaryPrj.dll
+C:\Users\mansu\prjects\DiaryPrj\bin\Debug\net6.0\DiaryPrj.pdb
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.dll
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\refint\DiaryPrj.dll
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.pdb
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\DiaryPrj.genruntimeconfig.cache
+C:\Users\mansu\prjects\DiaryPrj\obj\Debug\net6.0\ref\DiaryPrj.dll
