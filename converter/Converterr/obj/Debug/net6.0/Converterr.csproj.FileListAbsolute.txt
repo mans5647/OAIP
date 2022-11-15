@@ -1,0 +1,17 @@
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Converterr.exe
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Converterr.deps.json
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Converterr.runtimeconfig.json
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Converterr.dll
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Converterr.pdb
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.csproj.AssemblyReference.cache
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.AssemblyInfoInputs.cache
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.AssemblyInfo.cs
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.csproj.CoreCompileInputs.cache
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.dll
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\refint\Converterr.dll
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.pdb
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.genruntimeconfig.cache
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\ref\Converterr.dll
+C:\Users\mansu\OAIP\converter\Converterr\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mansu\OAIP\converter\Converterr\obj\Debug\net6.0\Converterr.csproj.CopyComplete

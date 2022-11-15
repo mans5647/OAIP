@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mansu\\OAIP\\tort.csproj": {}
+    "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\Converterr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mansu\\OAIP\\tort.csproj": {
+    "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\Converterr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mansu\\OAIP\\tort.csproj",
-        "projectName": "tort",
-        "projectPath": "C:\\Users\\mansu\\OAIP\\tort.csproj",
+        "projectUniqueName": "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\Converterr.csproj",
+        "projectName": "Converterr",
+        "projectPath": "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\Converterr.csproj",
         "packagesPath": "C:\\Users\\mansu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mansu\\OAIP\\obj\\",
+        "outputPath": "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mansu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

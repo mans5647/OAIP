@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mansu\\prjects\\tort\\tort.csproj",
+      "projectUniqueName": "C:\\Users\\mansu\\OAIP\\tort.csproj",
       "projectName": "tort",
-      "projectPath": "C:\\Users\\mansu\\prjects\\tort\\tort.csproj",
+      "projectPath": "C:\\Users\\mansu\\OAIP\\tort.csproj",
       "packagesPath": "C:\\Users\\mansu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mansu\\prjects\\tort\\obj\\",
+      "outputPath": "C:\\Users\\mansu\\OAIP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mansu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

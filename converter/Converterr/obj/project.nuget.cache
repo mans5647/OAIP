@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BeQHF5Dgs7Uxk9FFPN3vRUqoHpgQyA5hw9mgpmGFZx+l2mIGP38gftVsSWg2ol0iYhI+gZbb4xZ0QJbT0tbtIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mansu\\OAIP\\converter\\Converterr\\Converterr.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mansu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
