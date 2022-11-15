@@ -82,10 +82,10 @@ namespace Converterr
             else if (path.Contains("xml"))
             {
                 Company_model am = new Company_model("Amazon", "Bellevue", 50000000, 6000000000);
-                using (StreamWriter sw = new StreamWriter(path))
+                XmlSerializer ss = new XmlSerializer(typeof(Company_model));
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
                 {
-                    XmlSerializer ss = new XmlSerializer(typeof(Company_model));
-                    ss.Serialize(sw, am);
+                    ss.Serialize(fs, am);
                 }
             }
         }
