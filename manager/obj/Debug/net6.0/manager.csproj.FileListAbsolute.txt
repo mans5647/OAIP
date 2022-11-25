@@ -1,0 +1,15 @@
+/home/mans/repos/OAIP/manager/bin/Debug/net6.0/manager
+/home/mans/repos/OAIP/manager/bin/Debug/net6.0/manager.deps.json
+/home/mans/repos/OAIP/manager/bin/Debug/net6.0/manager.runtimeconfig.json
+/home/mans/repos/OAIP/manager/bin/Debug/net6.0/manager.dll
+/home/mans/repos/OAIP/manager/bin/Debug/net6.0/manager.pdb
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.csproj.AssemblyReference.cache
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.GeneratedMSBuildEditorConfig.editorconfig
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.AssemblyInfoInputs.cache
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.AssemblyInfo.cs
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.csproj.CoreCompileInputs.cache
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.dll
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/refint/manager.dll
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.pdb
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/manager.genruntimeconfig.cache
+/home/mans/repos/OAIP/manager/obj/Debug/net6.0/ref/manager.dll

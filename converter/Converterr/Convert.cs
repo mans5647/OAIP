@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+﻿using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using Newtonsoft.Json;

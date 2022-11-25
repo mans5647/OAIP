@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mans/repos/OAIP/converter/Converterr/Converterr.csproj": {}
+    "/home/mans/repos/OAIP/manager/manager.csproj": {}
   },
   "projects": {
-    "/home/mans/repos/OAIP/converter/Converterr/Converterr.csproj": {
+    "/home/mans/repos/OAIP/manager/manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mans/repos/OAIP/converter/Converterr/Converterr.csproj",
-        "projectName": "Converterr",
-        "projectPath": "/home/mans/repos/OAIP/converter/Converterr/Converterr.csproj",
+        "projectUniqueName": "/home/mans/repos/OAIP/manager/manager.csproj",
+        "projectName": "manager",
+        "projectPath": "/home/mans/repos/OAIP/manager/manager.csproj",
         "packagesPath": "/home/mans/.nuget/packages/",
-        "outputPath": "/home/mans/repos/OAIP/converter/Converterr/obj/",
+        "outputPath": "/home/mans/repos/OAIP/manager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mans/.nuget/NuGet/NuGet.Config"
@@ -37,12 +37,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
