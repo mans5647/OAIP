@@ -1,0 +1,15 @@
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\bin\Debug\net6.0\FastTyper.exe
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\bin\Debug\net6.0\FastTyper.deps.json
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\bin\Debug\net6.0\FastTyper.runtimeconfig.json
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\bin\Debug\net6.0\FastTyper.dll
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\bin\Debug\net6.0\FastTyper.pdb
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.csproj.AssemblyReference.cache
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.AssemblyInfoInputs.cache
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.AssemblyInfo.cs
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.csproj.CoreCompileInputs.cache
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.dll
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\refint\FastTyper.dll
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.pdb
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\FastTyper.genruntimeconfig.cache
+C:\Users\mansu\OAIP\FAST_TYPER_8\FastTyper\obj\Debug\net6.0\ref\FastTyper.dll
