@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿/*
+ * 'Main()' in Program.cs 
+ */
+using System.Diagnostics;
 namespace Resources_main
 {
     enum Delet
