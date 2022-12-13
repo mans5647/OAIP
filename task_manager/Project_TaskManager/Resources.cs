@@ -1,5 +1,5 @@
 ﻿/*
- * 'Main()' in Program.cs 
+ * 'Main()' in OAIP/task_manager/Project_TaskManager/Program.cs 
  */
 using System.Diagnostics;
 namespace Resources_main
