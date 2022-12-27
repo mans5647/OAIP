@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VOnH5HVM5zyEViCyX40eK+SFQ1RjbLdpjQOsn1cDbIj5PPw+jEPEgdix/PkpJPU7QG/QGlS8qUYgRAD9zHsn+g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mansu\\RiderProjects\\lpw\\lstwork\\lstwork.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mansu\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

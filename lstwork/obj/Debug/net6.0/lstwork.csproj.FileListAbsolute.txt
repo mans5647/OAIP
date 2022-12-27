@@ -1,0 +1,17 @@
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\lstwork.exe
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\lstwork.deps.json
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\lstwork.runtimeconfig.json
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\lstwork.dll
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\lstwork.pdb
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.csproj.AssemblyReference.cache
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.AssemblyInfoInputs.cache
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.AssemblyInfo.cs
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.csproj.CoreCompileInputs.cache
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.dll
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\refint\lstwork.dll
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.pdb
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.genruntimeconfig.cache
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\ref\lstwork.dll
+C:\Users\mansu\RiderProjects\lpw\lstwork\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mansu\RiderProjects\lpw\lstwork\obj\Debug\net6.0\lstwork.csproj.CopyComplete
