@@ -5,6 +5,7 @@ using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.Remoting.Channels;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,46 +24,86 @@ namespace tictak
     public partial class MainWindow : Window
     {
 
-        int current_role = 1, current_player = (int)TURN.HUMAN; // by default it is equal to crosses // by default player starting first
-        private enum roles
-        {
-            CROSSES = 1,
-            NULLS = 0,
-        }
-        
-        private enum TURN
-        {
-            COMP = 0,
-            HUMAN = 1,
-        }
-        
-
+        int current_role = 1; // by default player is CROSSES i.e. ~~ 'X' ~~
+        bool isDrawn = true;
+        public List<Button> buttons;
         public MainWindow()
         {
             InitializeComponent();
+            buttons = new List<Button> { b1, b2, b3, b4, b5, b6, b7, b7, b8, b9 };
         }
 
-
-        private void DeclareWinner(int current_player)
+        private void DeclareWinner()
         {
-            if (current_player == 1) // if player then...
+            if (current_role == 1)
             {
-                if (   b1.Content == "X" && b2.Content == "X" && b3.Content == "X"
+                if (b1.Content == "X" && b2.Content == "X" && b3.Content == "X"
                     || b4.Content == "X" && b5.Content == "X" && b6.Content == "X"
-                    || b7.Content == "X" && b7.Content == "X" && b9.Content == "X"
+                    || b7.Content == "X" && b8.Content == "X" && b9.Content == "X"
                     || b1.Content == "X" && b4.Content == "X" && b7.Content == "X"
                     || b2.Content == "X" && b5.Content == "X" && b8.Content == "X"
-                    || b3.Content == "X" && b6.Content == "X" && b9.Content == "X")
+                    || b3.Content == "X" && b6.Content == "X" && b9.Content == "X"
+                    || b1.Content == "X" && b5.Content == "X" && b9.Content == "X"
+                    || b3.Content == "X" && b5.Content == "X" && b7.Content == "X")
                 {
-                    MessageBox.Show("Player wins!");
+                    isDrawn = false;
+                    MessageBox.Show("Player won!");
                 }
+            }
+            else if (current_role == 0)
+            {
+                if (b1.Content == "O" && b2.Content == "O" && b3.Content == "O"
+                    || b4.Content == "O" && b5.Content == "O" && b6.Content == "O"
+                    || b7.Content == "O" && b8.Content == "O" && b9.Content == "O"
+                    || b1.Content == "O" && b4.Content == "O" && b7.Content == "O"
+                    || b2.Content == "O" && b5.Content == "O" && b8.Content == "O"
+                    || b3.Content == "O" && b6.Content == "O" && b9.Content == "O"
+                    || b1.Content == "O" && b5.Content == "O" && b9.Content == "O"
+                    || b3.Content == "O" && b5.Content == "O" && b7.Content == "O")
+                {
+                    isDrawn = false;
+                    MessageBox.Show("Player won!");
+                }
+            }
+            
+            if (b1.Content == "X" && b2.Content == "X" && b3.Content == "X"
+                || b4.Content == "X" && b5.Content == "X" && b6.Content == "X"
+                || b7.Content == "X" && b8.Content == "X" && b9.Content == "X"
+                    || b1.Content == "X" && b4.Content == "X" && b7.Content == "X"
+                    || b2.Content == "X" && b5.Content == "X" && b8.Content == "X"
+                    || b3.Content == "X" && b6.Content == "X" && b9.Content == "X"
+                    || b1.Content == "X" && b5.Content == "X" && b9.Content == "X"
+                    || b3.Content == "X" && b5.Content == "X" && b7.Content == "X")
+                    {
+                        isDrawn = false;
+                        MessageBox.Show("Computer won!");
+                    }
+            else if (current_role != 0)
+            {
+                    if (b1.Content == "O" && b2.Content == "O" && b3.Content == "O"
+                    || b4.Content == "O" && b5.Content == "O" && b6.Content == "O"
+                    || b7.Content == "O" && b8.Content == "O" && b9.Content == "O"
+                    || b1.Content == "O" && b4.Content == "O" && b7.Content == "O"
+                    || b2.Content == "O" && b5.Content == "O" && b8.Content == "O"
+                    || b3.Content == "O" && b6.Content == "O" && b9.Content == "O"
+                    || b1.Content == "O" && b5.Content == "O" && b9.Content == "O"
+                    || b3.Content == "O" && b5.Content == "O" && b7.Content == "O")
+                    {
+                        isDrawn = false;
+                        MessageBox.Show("Computer won!");
+                    }
+            }
+            else
+            {
+                MessageBox.Show("Drawn!");
             }
         }
 
         private void BStart_Click(object snd,RoutedEventArgs AS)
         {
-            
-            List<Button> buttons = new List<Button> { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
+            isDrawn = true;
+            current_role = 1;
+            buttons = new List<Button> { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
             foreach (Button but in buttons)
             {
                 but.IsEnabled = true;
@@ -76,17 +117,16 @@ namespace tictak
         {
             if (current_role == 1)
             {
-                current_role = 0; // switching to NULLS
-                string tmp = "nulls";
-                label1.Content = "Your role: " + tmp;
-                switchrole.IsEnabled = false;
+                current_role = 0;
+                string s = "nulles";
+                label1.Content = "Current role " + s;
+
             }
             else
             {
                 current_role = 1;
-                string tmp = "crosses";
-                label1.Content = "Your role: " + tmp;
-                switchrole.IsEnabled = false;
+                string s = "crosses";
+                label1.Content = "Current role " + s;
             }
         }
         
@@ -94,50 +134,44 @@ namespace tictak
 
         private void Button_Click(object sender, RoutedEventArgs args)
         {
-            
-            List<Button> buttons = new List<Button> { b1, b2, b3, b4, b5, b6, b7, b8, b9 };
-           
-                if (current_player == (int)TURN.HUMAN)
-                {
-                    (sender as Button).Content = "X";
-                    (sender as Button).IsEnabled = false;
-                    buttons.Remove((sender as Button));
-                    current_role = 0; // assign 'O' to computer 
-                    current_player = (int)TURN.COMP;
-                }
-            else
+           if (current_role == 1)
+           {
+                (sender as Button).Content = "X";
+                (sender as Button).IsEnabled = false;
+                buttons.Remove((sender as Button));
+                Comp_Walk();
+           }
+           else
             {
                 (sender as Button).Content = "O";
                 (sender as Button).IsEnabled = false;
                 buttons.Remove((sender as Button));
-                current_role = 1; // assign 'X' to computer 
+                Comp_Walk();
             }
-                 
-                Comp_Walk(buttons, current_role, current_player);
-                DeclareWinner(current_player);
+            DeclareWinner();
         }
 
-        private void Comp_Walk(List<Button>buttons, int role, int player)
+        private void Comp_Walk()
         {
-            if (current_player == (int)TURN.COMP)
+            if (buttons.Count > 0)
             {
-                if (buttons.Count > 0)
+                if (current_role == 1)
                 {
-                    Random number = new Random();
-                    int pos = number.Next(buttons.Count);
+                    Random rand = new Random();
+                    int pos = rand.Next(buttons.Count);
+                    buttons[pos].Content = "O";
                     buttons[pos].IsEnabled = false;
-                    if (role == 1)
-                    {
-                        buttons[pos].Content = "O";
-                        current_player = 1;
-                    }
-                    else
-                    {
-                        buttons[pos].Content = "X";
-                        current_player = 1;
-                    }
                     buttons.RemoveAt(pos);
-                    current_player = (int)TURN.HUMAN;
+                    DeclareWinner();
+                }
+                else
+                {
+                    Random rand = new Random();
+                    int pos = rand.Next(buttons.Count());
+                    buttons[pos].Content = "X";
+                    buttons[pos].IsEnabled = false;
+                    buttons.RemoveAt(pos);
+                    DeclareWinner();
                 }
             }
         }
