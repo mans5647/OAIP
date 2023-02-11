@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 namespace FastTyper
 {
     public class Player
@@ -16,7 +18,7 @@ namespace FastTyper
         bool FillTable(string name, uint symbols_per_min, uint symbols_per_sec)
         {
             bool already_exists = false;
-            Console.WriteLine("Table: \n");
+            Console.WriteLine("Таблица участников: \n");
             List<object> records = new List<object>();
             if ((already_exists = records.Contains(name)) == true || (already_exists = records.Contains(symbols_per_min)) == true || (already_exists = records.Contains(symbols_per_sec)) == true)
             {
@@ -40,18 +42,17 @@ namespace FastTyper
     {
         public static void TextChallenge(string player_name, uint symbols_per_min, uint symbols_per_sec)
         {
+            Player pl = new Player();
+            bool isCountedToEnd = false;
             Console.Clear();
             int forward = 0;
             int heigth = 0;
-            string text = "Now NASA is working towards logging some of the smaller asteroids, those measuring 140 metres" +
-                          "wide or more. Of the 25,000 estimated asteroids of this size, so far about 8,000 have been logged" +
-                          "leaving 17,000 unaccounted for. Considering that a 19-metre asteroid that exploded above the city" +
-                          "of Chelyabinsk in Russia in 2013 injured 1,200 people, these middle-sized asteroids would be a   " +
-                          "serious danger if they enter Earth's orbit.";
+            string text = "Написание текстов для главных страниц сайта – дело непростое. Проблема в том, что существует сразу несколько подходов к подготовке таких материалов.\r\n\r\nКаждый подход, как это и водится, имеет свои плюсы и минусы. Где-то можно выиграть в оптимизации, но потерять в живых читателях. Где-то можно приобрести живых читателей, но придется жертвовать SEO-показателями и, возможно, по этой причине отставать от конкурентов.\r\n\r\nПостоянные сомнения, касающиеся оптимальных путей создания текстов для главной, стали вполне привычными спутниками авторов.";
 
             Console.Write(text);
             Thread start_timer = new Thread(Timer);
             start_timer.Start();
+
             for (int i = 0; i < text.Length; i++)
             {
                 Console.SetCursorPosition(forward, heigth);
@@ -63,6 +64,7 @@ namespace FastTyper
                     Console.Write(sym.KeyChar);
                     forward++;
                     symbols_per_sec++;
+                    symbols_per_min++;
                 }
                 else 
                 {
@@ -75,11 +77,30 @@ namespace FastTyper
                     forward = 0;
                     heigth++;
                 }
+                if (forward == text.Length)
+                {
+                    isCountedToEnd = true;
+                    start_timer.Abort();
+                }
             }
+            if (isCountedToEnd)
+            {
+                Console.WriteLine("Время вышло! Вы допечатали до конца!");
+            }
+            start_timer.Abort();
+            Console.WriteLine("Время вышло!");
+            Thread.Sleep(1000);
+            Console.Clear();
+            List<Player> write = new List<Player>();
+            pl.Name = player_name;
+            pl.SymsPerSecs = symbols_per_sec;
+            pl.SymsPerMins = symbols_per_min / 60;
+            write.Add(pl);
+            string json_t = JsonConvert.SerializeObject(write);
         }
         private static void Timer()
         {
-            int remTime = 60;
+            int remTime = 4;
             Stopwatch st_Watch = new Stopwatch();
             do
             {
@@ -108,7 +129,6 @@ namespace FastTyper
             } while (remTime != 0);
             Console.SetCursorPosition(10, 10);
             Console.WriteLine($"0:{remTime}");
-
         }
     }
 }
