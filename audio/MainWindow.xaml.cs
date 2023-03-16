@@ -28,9 +28,10 @@ namespace audio
         bool IsPaused = true;
         bool IsRepeatAble = false;
         bool IsEnded = false;
-        int current_rep = 0;
+        bool isLocked = false;
         static int next_mus = 0;
-        
+
+        string[] reserve = { }; 
         public MainWindow()
         {
             InitializeComponent();
@@ -38,8 +39,7 @@ namespace audio
             prev.IsEnabled = false;
             nxt.IsEnabled = false;
             rep.IsEnabled = false;
-            Thread th = new Thread(Timer);
-            th.Start();
+            but_sh.IsEnabled = false;
         }
 
         string[] musics = { };
@@ -55,8 +55,9 @@ namespace audio
                     string f = System.IO.Path.GetFileName(fl);
                     MusicBox.Items.Add(f);
                 }
+                reserve = musics;
             }
-            
+
             Player.Source = new Uri(musics[next_mus]);
             Player.Play();
             IsPaused = false;
@@ -67,35 +68,50 @@ namespace audio
         {
             if (!IsPaused)
             {
+                var brush = new ImageBrush(); brush.ImageSource = new BitmapImage(new
+                Uri("C:\\Users\\mansu\\Downloads\\play.png", UriKind.Relative));
                 Player.Pause();
                 IsPaused = true;
-                pls.Content = "Resume";
-                
+                pls.Background = brush;  
+
             }
             else
             {
+                
+                Player.Pause();
                 Player.Play();
                 IsPaused = false;
-                pls.Content = "Pause";
+                
             }
         }
-        
+
         private void slider_changed(object s, RoutedPropertyChangedEventArgs<double> e)
         {
-            Player.Position = new TimeSpan(0,0,0,(int)slider.Value);
+            TimeSpan ts = new TimeSpan((int)slider.Value);
+            Player.Position = ts;
         }
 
         private void Audio_Opened(object s, RoutedEventArgs f)
         {
-            slider.Maximum = (double)Player.NaturalDuration.TimeSpan.TotalSeconds;
+            slider.Maximum = Player.NaturalDuration.TimeSpan.Ticks;
+            TimeRemain.Text = Player.NaturalDuration.TimeSpan.ToString(@"mm\:ss");
+            Thread gg = new Thread(Timer);
+            gg.Start();
         }
 
         private void Audio_Ended(object s, RoutedEventArgs j)
         {
+            if (IsRepeatAble)
+            {
+                slider.Value = 0.0;
+                Player.Stop();
+                Player.Source = new Uri(musics[next_mus]);
+                Player.Play();
+            }
             IsEnded = true;
+            Player.Stop();
             Player.Source = new Uri(musics[next_mus++]);
             slider.Value = 0.0;
-            Player.Play();
         }
 
         private void PreviousMusic(object s, RoutedEventArgs h)
@@ -110,9 +126,9 @@ namespace audio
                 next_mus = musics.Length - 1;
             }
             Player.Stop();
-            Player.Source = new Uri(musics[next_mus]);
+            Player.Source = new Uri(musics[next_mus--]);
             Player.Play();
-            
+
         }
 
         private void NextMusic(object g, RoutedEventArgs j)
@@ -127,7 +143,7 @@ namespace audio
                 next_mus = 0;
             }
             Player.Stop();
-            Player.Source = new Uri(musics[next_mus]);
+            Player.Source = new Uri(musics[next_mus++]);
             Player.Play();
         }
 
@@ -135,13 +151,10 @@ namespace audio
         {
             if (!IsRepeatAble)
             {
-                rep.Content = "Disable";
-                Player.Source = new Uri(musics[next_mus]);
                 IsRepeatAble = true;
-            }    
+            }
             else
             {
-                rep.Content = "Repeat";
                 IsRepeatAble = false;
             }
         }
@@ -153,14 +166,41 @@ namespace audio
             nxt.IsEnabled = true;
             rep.IsEnabled = true;
             slider.IsEnabled = true;
+            but_sh.IsEnabled = true;
         }
 
         private void Timer()
         {
-
             while (true)
             {
-                this.Dispatcher.Invoke(() => { slider.Value = Player.Position.Seconds; });
+                
+                Dispatcher.Invoke(new Action(() =>
+                {
+                    slider.Value = Player.Position.Ticks;
+                    TimeElapsed.Text = Player.Position.ToString("mm\\:ss");
+                }
+                ));
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void shuff_music(object sender, RoutedEventArgs d)
+        {
+            if (!isLocked)
+            {
+
+                Random s = new Random();
+                next_mus = 0;
+                Player.Stop();
+                musics = musics.OrderBy(x => s.Next()).ToArray();
+                Player.Source = new Uri(musics[next_mus]);
+                Player.Play();
+                isLocked = true;
+            }
+            else
+            {
+                musics = reserve;
+                isLocked = false;
             }
         }
     }
