@@ -1,0 +1,38 @@
+﻿<Window x:Class="budget_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:budget_app"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="18*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="481*"/>
+            <ColumnDefinition Width="319*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="NTypes" SelectionChanged="note_type_changed" HorizontalAlignment="Left" Margin="47,91,0,0" VerticalAlignment="Top" Width="168" Height="24" Grid.Row="1" Grid.Column="1"/>
+        <Button Click="add_note_type" Content="Add new note type" HorizontalAlignment="Left" Margin="38,18,0,0" Grid.Row="2" VerticalAlignment="Top" Width="218" Height="32" Grid.Column="1"/>
+        <TextBox Name="summ" HorizontalAlignment="Left" Margin="32,67,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Height="18" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,51,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Summ" VerticalAlignment="Top" Height="16" Width="34" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="104,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Note type" VerticalAlignment="Top" Height="16" Width="54" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="104,7,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Note name" VerticalAlignment="Top" Height="16" Width="86" Grid.Column="1"/>
+        <TextBox x:Name="note_name" HorizontalAlignment="Left" Margin="70,28,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="18" Grid.Column="1"/>
+        <DatePicker Name="from_date" HorizontalAlignment="Left" Margin="22,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="751" Height="24" SelectedDateChanged="date_changed"/>
+        <DataGrid Name="data1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="22,15,22,24" Grid.RowSpan="2" Grid.Row="1" AutoGenerateColumns="True" SelectionChanged="Note_selected"/>
+        <Button Name="add_note" Grid.Column="1" Content="Add note" HorizontalAlignment="Left" Margin="79,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="136" Height="25" Click="add_note_Click"/>
+        <Button Name="change_note" Grid.Column="1" Content="Change note" HorizontalAlignment="Left" Margin="79,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="136" Height="24" Click="change_note_Click"/>
+        <Button Name="del_note" Grid.Column="1" Content="Delete note" HorizontalAlignment="Left" Margin="79,86,0,0" Grid.Row="3" VerticalAlignment="Top" Width="136" Height="23" Click="del_note_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="152,73,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Finally:" TextAlignment="Center" VerticalAlignment="Top" Width="48"/>
+        <TextBlock Name="money" HorizontalAlignment="Left" Margin="179,73,0,0" Grid.Row="3" TextWrapping="Wrap" Text="0" TextAlignment="Center" VerticalAlignment="Top" Height="25" Width="79"/>
+        <Button Grid.Column="1" Content="Update list" HorizontalAlignment="Left" Margin="238,93,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="Button_Click"/>
+
+    </Grid>
+</Window>

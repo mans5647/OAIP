@@ -1,0 +1,15 @@
+﻿<Window x:Class="budget_app.type_n"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:budget_app"
+        mc:Ignorable="d"
+        Title="Add note type" Height="200" Width="400" Closed="win_closed">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="Enter adding note type name: " VerticalAlignment="Top" Width="242"/>
+        <TextBox Name="note" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="242"/>
+        <Button Content="Add type" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top" Width="130" Height="41" Click="invoke"/>
+
+    </Grid>
+</Window>
