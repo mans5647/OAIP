@@ -1,0 +1,12 @@
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\bin\Debug\net7.0\json_serializer.deps.json
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\bin\Debug\net7.0\json_serializer.dll
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\bin\Debug\net7.0\json_serializer.pdb
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.csproj.AssemblyReference.cache
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.AssemblyInfoInputs.cache
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.AssemblyInfo.cs
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.csproj.CoreCompileInputs.cache
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.dll
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\refint\json_serializer.dll
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\json_serializer.pdb
+C:\Users\mansu\OAIP\LibraryXAML\library_wpf\json_serializer\obj\Debug\net7.0\ref\json_serializer.dll

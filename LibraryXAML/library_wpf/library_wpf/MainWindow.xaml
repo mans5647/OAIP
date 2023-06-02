@@ -1,0 +1,15 @@
+﻿<Window x:Class="library_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:library_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="box" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="142,28,138,129"/>
+        <Button Content="SEND" HorizontalAlignment="Left" Margin="540,332,0,0" VerticalAlignment="Top" Height="41" Width="120" Click="SendMessage"/>
+        <TextBox Name="text_field" HorizontalAlignment="Left" Margin="140,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" Height="41"/>
+
+    </Grid>
+</Window>
